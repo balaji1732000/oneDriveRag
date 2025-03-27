@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+pinecone 
+sentence-transformers 
+PyPDF2 
+python-docx 
+requests
+google-generativeai
