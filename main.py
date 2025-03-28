@@ -11,11 +11,18 @@ from langchain_community.document_loaders.onedrive import OneDriveLoader
 
 app = FastAPI()
 logging.basicConfig(level=logging.INFO)
+from dotenv import load_dotenv
+
+
+load_dotenv()
 
 #trigger workflow
 # Set environment variables for authentication
-os.environ['O365_CLIENT_ID'] = "d8fee40d-6e52-4bf2-b564-199087d2f8e2"
-os.environ['O365_CLIENT_SECRET'] = ".qe8Q~8XATcwiV~5zHts5hu3i0I5SMOXPfFTjcKB"
+os.environ['O365_CLIENT_ID'] = os.environ.get('O365_CLIENT_ID')
+os.environ['O365_CLIENT_SECRET'] = os.environ.get("O365_CLIENT_SECRET")
+
+print(os.environ['O365_CLIENT_ID'])
+print(os.environ['O365_CLIENT_SECRET'])
 # === Global Initialization for RAG System ===
 PINECONE_API_KEY = os.environ.get("PINECONE_API_KEY", "pcsk_7KFdTT_UcAb7xSngLidVECR5kKAdQmQ4xQeUfXQSGPbjhmXQgM9GqWAjCHNN36qigcaSWZ")
 PINECONE_ENVIRONMENT = os.environ.get("PINECONE_ENVIRONMENT", "us-east-1")

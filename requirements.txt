@@ -9,3 +9,4 @@ google-generativeai
 langchain-community
 o365
 pymupdf
+python-dotenv
