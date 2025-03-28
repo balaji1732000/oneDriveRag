@@ -6,3 +6,6 @@ PyPDF2
 python-docx 
 requests
 google-generativeai
+langchain-community
+o365
+pymupdf
