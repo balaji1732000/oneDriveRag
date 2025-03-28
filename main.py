@@ -28,7 +28,7 @@ PINECONE_API_KEY = os.environ.get("PINECONE_API_KEY")
 print(PINECONE_API_KEY)
 PINECONE_ENVIRONMENT = os.environ.get("PINECONE_ENVIRONMENT", "us-east-1")
 INDEX_NAME = os.environ.get("INDEX_NAME", "rag")
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "AIzaSyCMyWFvkv4y0Y_G7WExjXBo6Bx2iZ1oqSU")
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 
 # Initialize Pinecone
 pc = Pinecone(api_key=PINECONE_API_KEY)
