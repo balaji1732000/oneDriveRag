@@ -8,7 +8,12 @@ import pinecone
 from pinecone import Pinecone
 from sentence_transformers import SentenceTransformer
 from langchain_community.document_loaders.onedrive import OneDriveLoader
-
+import mimetypes
+mimetypes.add_type(
+    'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 
+    '.docx', 
+    strict=True
+)
 app = FastAPI()
 logging.basicConfig(level=logging.INFO)
 from dotenv import load_dotenv
